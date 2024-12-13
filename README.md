@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -34,3 +32,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+- Deploy button
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsowamateusz%2Faisolutions-demo-app&env=AUTH0_SECRET,AUTH0_BASE_URL,AUTH0_ISSUER_BASE_URL,AUTH0_CLIENT_ID,AUTH0_CLIENT_SECRET)
+
+## Environment Variables
+
+- `AUTH0_SECRET`: Use `[openssl rand -hex 32]` to generate a 32-byte value.
+- `AUTH0_BASE_URL`: Set to `http://localhost:3000` for local development.
+- `AUTH0_ISSUER_BASE_URL`: Set to `https://{yourDomain}`.
+- `AUTH0_CLIENT_ID`: Replace `{yourClientId}` with your Auth0 Client ID.
+- `AUTH0_CLIENT_SECRET`: Replace `{yourClientSecret}` with your Auth0 Client Secret.
+
+## Additional Features
+
+This app utilizes components from `aisolutions-react-components` - a library of reusable React components built with TypeScript. It includes components such as buttons, inputs, and forms, styled with TailwindCSS and optimized for modern React applications. This package is designed to be a starting point for building and scaling component libraries.
