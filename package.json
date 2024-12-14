@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",
-    "aisolutions-react-components": "^1.0.4",
+    "aisolutions-react-components": "^1.0.7",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
