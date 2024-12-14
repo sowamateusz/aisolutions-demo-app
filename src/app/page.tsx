@@ -1,26 +1,31 @@
 "use client";
 
-import { SimpleSearchForm } from "aisolutions-react-components";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import { Link, SimpleSearchForm } from "aisolutions-react-components";
 
 export default function Home() {
+  const { user } = useUser();
   const onSubmit = (data: { query: string }) => {
-    console.log("Search form submitted", data.query);
+    alert("Search form submitted: " + data.query);
   };
   return (
-    <div>
-      <h1>Demo Home</h1>
-
-      <div className="flex gap-2">
-        <a href="/api/auth/login">Login</a>
-        <a href="/api/auth/me">API/me</a>
-        <a href="/api/auth/logout">Logout</a>
-        <a href="/admin">Admin</a>
+    <div className="p-5">
+      <h1 className="text-lg">Demo App</h1>
+      <div className="flex gap-5 mt-5">
+        {!user && <Link href="/api/auth/login" text="Login" />}
+        {user && (
+          <>
+            <Link href="/admin" text="Admin" />
+            <Link href="/api/auth/me" text="Me" variant="secondary" />
+            <Link href="/api/auth/logout" text="Logout" variant="secondary" />
+          </>
+        )}
       </div>
-
-      <hr className="my-5" />
-
-      <h2>Search component</h2>
-      <SimpleSearchForm className="mt-4" onSubmit={onSubmit} />
+      <hr className="my-10" />
+      <div>
+        <h2 className="text-md mb-5">SimpleSearchForm Component</h2>
+        <SimpleSearchForm onSubmit={onSubmit} />
+      </div>
     </div>
   );
 }
