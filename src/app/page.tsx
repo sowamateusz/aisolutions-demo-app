@@ -12,12 +12,16 @@ export default function Home() {
     <div className="p-5">
       <h1 className="text-lg">Demo App</h1>
       <div className="flex gap-5 mt-5">
-        {!user && <Link href="/api/auth/login" text="Login" />}
+        {!user && <Link href="/api/auth/login">Login</Link>}
         {user && (
           <>
-            <Link href="/admin" text="Admin" />
-            <Link href="/api/auth/me" text="Me" variant="secondary" />
-            <Link href="/api/auth/logout" text="Logout" variant="secondary" />
+            <Link href="/admin">Admin</Link>
+            <Link href="/api/auth/me" variant="secondary">
+              Me
+            </Link>
+            <Link href="/api/auth/logout" variant="secondary">
+              Logout
+            </Link>
           </>
         )}
       </div>

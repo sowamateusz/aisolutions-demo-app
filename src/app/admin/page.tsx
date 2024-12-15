@@ -11,9 +11,16 @@ const AdminHome = () => {
       <h1 className="text-lg">Demo App \ Admin</h1>
       {user && (
         <div className="flex gap-5 mt-5">
-          <Link href="/" text="Home" variant="secondary" />
-          <Link href="/api/auth/me" text="Me" variant="secondary" />
-          <Link href="/api/auth/logout" text="Logout" variant="secondary" />
+          <Link href="/" variant="secondary">
+            Home
+          </Link>
+
+          <Link href="/api/auth/me" variant="secondary">
+            Me
+          </Link>
+          <Link href="/api/auth/logout" variant="secondary">
+            Logout
+          </Link>
         </div>
       )}
       <hr className="my-10" />
