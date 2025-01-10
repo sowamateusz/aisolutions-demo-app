@@ -27,6 +27,8 @@ export const GET = async (request: Request) => {
       ])
       .toArray();
 
+    // const total = await dataCollection.countDocuments(filter);
+
     return NextResponse.json({
       data,
       total: 0,
